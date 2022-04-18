@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+
+  postgres_db:
+    image:  postgres:latest
+    container_name: postgres-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=voucher
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=voucher
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgres-db:/Users/bikash/homelike/dhcasestudy/voucher_api-main/postgresql/data
+      - ./temp:/temp
+
+
+  voucher_api:
+    image: voucherapp:1.0
+    container_name: voucher_api
+    depends_on:
+      - postgres_db
+    command: python /voucher_api/voucher_selection_api.py
+    environment:
+      - POSTGRES_USER=voucher
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=voucher
+      - POSTGRES_HOST=postgres_db
+      - POSTGRES_PORT=5432
+    volumes:
+      - ../voucher_api:/voucher_api
+    ports:
+      - "5051:5051"
+
+
+volumes:
+  pg-db:
+

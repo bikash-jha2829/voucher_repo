@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+
+  postgres_db:
+    image:  postgres:latest
+    container_name: postgres-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=voucher
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=voucher
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgres-db:/Users/bikash/homelike/dhcasestudy/voucher_api-main/postgresql/data
+      - ./temp:/temp
+
+
+volumes:
+  pgres-db:
+
