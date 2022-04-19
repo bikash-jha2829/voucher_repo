@@ -87,16 +87,20 @@ Return Default value in case of Exception in rest apis
 
 Airflow to run our ETL jobs when we recive the input files (Airflow on K8s)
 
-Sample Run :
+#Sample Run :
 
+
+Request:
 
 
 <img width="218" alt="image" src="https://user-images.githubusercontent.com/79247013/163950391-1fd66f96-295c-4f36-8f84-83ab2037ec7e.png">
 
 Response
+
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/79247013/163950558-6b6619c7-9f99-47be-89bf-906e9c976fb2.png">
 
 with run.py
+
 <img width="374" alt="image" src="https://user-images.githubusercontent.com/79247013/163950915-9e787216-deee-4c70-87b7-b21e88fe4e06.png">
 
 
