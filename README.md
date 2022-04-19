@@ -1,4 +1,5 @@
-# voucher_repo
+# voucher_repo 
+# Sample Run images below
 
 Task : 
 The task is to create a Voucher Selection API for the country: Peru
@@ -95,13 +96,8 @@ Sample Run :
 Response
 <img width="250" alt="image" src="https://user-images.githubusercontent.com/79247013/163950558-6b6619c7-9f99-47be-89bf-906e9c976fb2.png">
 
-
-
-
-
-
-
-
+with run.py
+<img width="374" alt="image" src="https://user-images.githubusercontent.com/79247013/163950915-9e787216-deee-4c70-87b7-b21e88fe4e06.png">
 
 
 
