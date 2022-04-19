@@ -25,7 +25,10 @@ we used Spark framework as I tried to consider the scenario of huge data set (pa
 Input File format : parquet
 Output : write to Postgre DB
 
-Model SQL : load segment rules / load raw data after spark transformation / joining the tables to get the final dataset into the postgre
+SQL_Model : load segment rules / load raw data after spark transformation / joining the tables to get the final dataset into the postgre
+    1. raw_data.sql  = Script to create schema and table structure of raw table
+    2. segments.sql  = Script to create segment criteria
+    3. voucher_segment = after transformation this script will create the generation of best voucher mapping based on sgements and segment type
 
 # voucher API:
 localhost:5051/selection_criteria : get the list of segemnt rules criteria
