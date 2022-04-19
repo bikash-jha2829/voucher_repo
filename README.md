@@ -5,9 +5,9 @@ Task :
 The task is to create a Voucher Selection API for the country: Peru
 There are 3 steps that should be done:
 
-0. Conduct data analysis to explore and prepare the data.
-1. Create a data pipeline to generate customer segments, including data cleaning, optimization.
-2. Create a REST API that will expose the most used voucher value for a particular customer segment
+1. Conduct data analysis to explore and prepare the data.
+2. Create a data pipeline to generate customer segments, including data cleaning, optimization.
+3. Create a REST API that will expose the most used voucher value for a particular customer segment
 
 ## Data Pipeline
 
@@ -66,7 +66,7 @@ print(x.text)
     4. Chrome and hit the endpoints
 
 
-2. Container : `there is some problems while running it via container ( working on fixing this because of windows platform)
+2. Container : `there is some problems while running it via container ( **working on fixing this because of windows platform**)
     1. Spark job : Run it via SparkonK8s operator microservices on k8s cluster
     2. Rest apis : run docker-compose file present in docker_container dir
  
@@ -75,24 +75,29 @@ print(x.text)
 
 # Testing
 
-Added testcase for ETL pipeline ( teating creation of spark session and dataframe equality check after transformation)
+Added testcase for ETL pipeline ( testing creation of spark session and dataframe equality check after transformation)
+
 Testcase for API and postgres
 
 Directory : tests
 
 
-Comments :
+# Comments :
+
 Entire applications is divided into 2 microservices ( ETL / Apis)
 Spark can be run by  microservices over k8s ( can scale based on input data automatically and will be 10X times faster than pandas and python lib)
+
 Flask rest api for apis operatio
 
-Things to improve :
+## Things to improve :
+
 We can improve the failure of rest api cause due to bad input data or can make it more resilient
 Return Default value in case of Exception in rest apis
 
-Airflow to run our ETL jobs when we recive the input files (Airflow on K8s)
+**Airflow** to run our ETL jobs when we recive the input files (Airflow on K8s)
 
-#Sample Run :
+
+# Sample Run :
 
 
 Request:
